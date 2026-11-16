@@ -23,7 +23,7 @@ STAMP = f'<p class="machine">{stamp()}</p>'
 
 # The mark's own construction, stated next to it — the same numbers the
 # wallpaper plate draws and brand-build.py works from.
-GEOMETRY = '<p class="machine">R 32 &middot; Stroke 10 &middot; Opening 110&deg;</p>'
+GEOMETRY = '<p class="machine">R 20 &middot; Horizon 34 &middot; Bars 40/28/16</p>'
 
 # The studio's construction language stays on the studio's own page. Undercrew
 # wears its own world (brand/README.md section 4), so its pages take the
@@ -66,12 +66,13 @@ index_body = f"""
 </header>
 
 <div class="prose">
-  <p>Kyparis is Kevin Holloway's development studio — games, productivity apps,
-  and fitness projects, built one at a time and shipped.</p>
+  <p>Kyparis is a small studio that builds games, productivity apps, and business
+  software, and ships them. It is Kevin Holloway's studio, from Gainesville, Florida.</p>
 
-  <p>The name comes from the Greek <em>enkrateia</em>: self-mastery, and the
-  conviction that what you can control is enough to build something worth
-  keeping.</p>
+  <p>The name is from the Greek <em>kyparissos</em>, the cypress: the bald cypress
+  of the swamps around Gainesville, rooted in water and standing for centuries.
+  A cypress does not choose the flood; it chooses to hold its ground, and it
+  keeps growing.</p>
 </div>
 
 <section class="section">
@@ -356,7 +357,7 @@ wildhold_privacy_body = f"""
 
 pages = [
     ("index.html", page("Kyparis",
-        "Kyparis is Kevin Holloway's development studio — games, productivity apps, and fitness projects.",
+        "Kyparis is a small studio that builds games, productivity apps, and business software, and ships them.",
         "/", index_body)),
     ("undercrew/index.html", page("Undercrew",
         "Undercrew: a deep 2D sandbox world you never directly play — you run the crew of agents that plays it, from your phone.",

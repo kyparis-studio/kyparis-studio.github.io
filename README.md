@@ -1,9 +1,9 @@
-# enkrata.github.io
+# kyparis-studio.github.io
 
-The public face of [Enkrata](https://github.com/Enkrata) — the studio landing page,
+The public face of [Kyparis](https://github.com/kyparis-studio) — the studio landing page,
 the Undercrew page, and the privacy policy that external TestFlight requires.
 
-Live at <https://enkrata.github.io>.
+Live at <https://kyparis-studio.github.io>.
 
 ## Layout
 
@@ -29,7 +29,7 @@ across three pages.
 ## Brand
 
 Colour, type and the mark come from the brand kit in
-[enkrata-workspace](https://github.com/Enkrata/enkrata-workspace) under `brand/`.
+[enkrata-workspace](https://github.com/kyparis-studio/enkrata-workspace) under `brand/`.
 `brand.css` mirrors its `tokens.css`; that file is the source of truth, so change
 it there first and mirror it here.
 

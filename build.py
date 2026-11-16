@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Assemble the Enkrata site pages from a shared head template and the brand
+"""Assemble the Kyparis site pages from a shared head template and the brand
 lockup, so head tags and the mark cannot drift between pages."""
 import os, subprocess, datetime
 
@@ -60,13 +60,13 @@ lock_sm = LOCKUP.replace('class="lockup"', 'class="lockup lockup-sm"')
 index_body = f"""
 <header class="masthead">
   {lock}
-  <h1 class="sr-only">Enkrata</h1>
+  <h1 class="sr-only">Kyparis</h1>
   <p class="tagline">Hard work on things that matter.</p>
   {GEOMETRY}
 </header>
 
 <div class="prose">
-  <p>Enkrata is Kevin Holloway's development studio — games, productivity apps,
+  <p>Kyparis is Kevin Holloway's development studio — games, productivity apps,
   and fitness projects, built one at a time and shipped.</p>
 
   <p>The name comes from the Greek <em>enkrateia</em>: self-mastery, and the
@@ -98,7 +98,7 @@ index_body = f"""
 
 <hr class="rule">
 <footer>
-  <p>&copy; 2026 Enkrata &middot; <a href="https://github.com/Enkrata">GitHub</a></p>
+  <p>&copy; 2026 Kyparis &middot; <a href="https://github.com/kyparis-studio">GitHub</a></p>
   {STAMP}
 </footer>
 """
@@ -106,7 +106,7 @@ index_body = f"""
 # -------------------------------------------------------------- undercrew
 undercrew_body = f"""
 <header class="masthead">
-  <a href="/" aria-label="Enkrata home">{lock_sm}</a>
+  <a href="/" aria-label="Kyparis home">{lock_sm}</a>
   <h1 class="title">Undercrew</h1>
   <p class="tagline">The depth of a world-sim. The interaction model of a coach.</p>
 </header>
@@ -140,7 +140,7 @@ undercrew_body = f"""
 <hr class="rule">
 <footer>
   <p><a href="/undercrew/privacy.html">Privacy policy</a> &middot;
-  An <a href="/">Enkrata</a> game &middot; &copy; 2026 Enkrata</p>
+  An <a href="/">Kyparis</a> game &middot; &copy; 2026 Kyparis</p>
   {STAMP}
 </footer>
 """
@@ -150,7 +150,7 @@ undercrew_body = f"""
 # referenced by App Store Connect and is legally operative — restyle only.
 privacy_body = f"""
 <header class="masthead">
-  <a href="/" aria-label="Enkrata home">{lock_sm}</a>
+  <a href="/" aria-label="Kyparis home">{lock_sm}</a>
   <h1 class="title">Undercrew — Privacy Policy</h1>
   <p class="date">Effective August 17, 2026</p>
 </header>
@@ -206,8 +206,8 @@ privacy_body = f"""
 
 <hr class="rule">
 <footer>
-  <p><a href="/undercrew/">Undercrew</a> &middot; An <a href="/">Enkrata</a>
-  game &middot; &copy; 2026 Enkrata</p>
+  <p><a href="/undercrew/">Undercrew</a> &middot; An <a href="/">Kyparis</a>
+  game &middot; &copy; 2026 Kyparis</p>
   {STAMP}
 </footer>
 """
@@ -220,7 +220,7 @@ PIXEL_IMG = 'style="display:block;width:100%;height:auto;image-rendering:pixelat
 
 wildhold_body = f"""
 <header class="masthead">
-  <a href="/" aria-label="Enkrata home">{lock_sm}</a>
+  <a href="/" aria-label="Kyparis home">{lock_sm}</a>
   <h1 class="title">Wildhold</h1>
   <p class="tagline">Your zoo, your ledger, your legacy.</p>
 </header>
@@ -259,7 +259,7 @@ wildhold_body = f"""
 
 <section class="section">
   <h2>Press</h2>
-  <p>Wildhold is made by Enkrata, a small independent studio. For press
+  <p>Wildhold is made by Kyparis, a small independent studio. For press
   enquiries and review copies, email
   <a href="mailto:press@enkrata.dev">press@enkrata.dev</a>.</p>
   <ul>
@@ -274,7 +274,7 @@ wildhold_body = f"""
 <hr class="rule">
 <footer>
   <p><a href="/wildhold/privacy.html">Privacy policy</a> &middot;
-  An <a href="/">Enkrata</a> game &middot; &copy; 2026 Enkrata</p>
+  An <a href="/">Kyparis</a> game &middot; &copy; 2026 Kyparis</p>
   {STAMP}
 </footer>
 """
@@ -283,13 +283,13 @@ wildhold_body = f"""
 # is legally operative from publication — change it only with a new date.
 wildhold_privacy_body = f"""
 <header class="masthead">
-  <a href="/" aria-label="Enkrata home">{lock_sm}</a>
+  <a href="/" aria-label="Kyparis home">{lock_sm}</a>
   <h1 class="title">Wildhold — Privacy Policy</h1>
   <p class="date">Effective November 1, 2026</p>
 </header>
 
 <div class="prose">
-  <p>Wildhold is a game made by Enkrata. This policy covers the game on Mac,
+  <p>Wildhold is a game made by Kyparis. This policy covers the game on Mac,
   iPad, iPhone and Steam.</p>
   <p><strong>The short version: Wildhold collects nothing.</strong></p>
 </div>
@@ -348,15 +348,15 @@ wildhold_privacy_body = f"""
 
 <hr class="rule">
 <footer>
-  <p><a href="/wildhold/">Wildhold</a> &middot; An <a href="/">Enkrata</a>
-  game &middot; &copy; 2026 Enkrata</p>
+  <p><a href="/wildhold/">Wildhold</a> &middot; An <a href="/">Kyparis</a>
+  game &middot; &copy; 2026 Kyparis</p>
   {STAMP}
 </footer>
 """
 
 pages = [
-    ("index.html", page("Enkrata",
-        "Enkrata is Kevin Holloway's development studio — games, productivity apps, and fitness projects.",
+    ("index.html", page("Kyparis",
+        "Kyparis is Kevin Holloway's development studio — games, productivity apps, and fitness projects.",
         "/", index_body)),
     ("undercrew/index.html", page("Undercrew",
         "Undercrew: a deep 2D sandbox world you never directly play — you run the crew of agents that plays it, from your phone.",

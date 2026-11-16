@@ -6,63 +6,65 @@
  *
  * Contrast is measured, not eyeballed: every text role clears 4.5:1 against both
  * the page ground and the raised surface. Three combinations that look fine and
- * are not: pine on pine-black 2.10:1, brass on bone 2.99:1, sage on bone 4.07:1.
+ * are not: spring on night 3.29:1, spring on limestone 4.32:1, dawn on
+ * limestone 1.83:1 (hence the deeper accents and --ky-dawn-ink).
  *
- * Type: the brand specifies Jost for display and IBM Plex Sans for body. Neither
- * is served here yet — self-hosting is pending, and loading them from a font CDN
- * would send visitors' IPs to a third party, which this site's own privacy policy
- * says it does not do. Until then the fallback stacks below do the work.
+ * Type: the brand specifies Archivo (width 125) for display, Inter for body and
+ * JetBrains Mono for the machine layer. None is served here yet — self-hosting is
+ * pending, and loading them from a font CDN would send visitors' IPs to a third
+ * party, which this site's own privacy policy says it does not do. Until then the
+ * fallback stacks below do the work.
  */
 
 :root {
-  --ek-bg: #F6F4EF;
-  --ek-surface: #FFFFFF;
-  --ek-ink: #12211C;
-  --ek-muted: #626D67;
-  --ek-accent: #1E5B4A;
-  --ek-accent-strong: #17483A;
-  --ek-brass-ink: #8C6A1E;
-  --ek-rule: #E3DFD5;
-  --ek-rule-strong: #D2CDBF;
+  --ky-bg:            #F1EEE6;
+  --ky-surface:       #FFFFFF;
+  --ky-ink:           #16202A;
+  --ky-muted:         #5A6270;
+  --ky-accent:        #0F6F6D;
+  --ky-accent-strong: #0E6462;
+  --ky-dawn-ink:      #A4552E;
+  --ky-rule:          #E2DDD1;
+  --ky-rule-strong:   #D0CABB;
 
-  --ek-font-display: Jost, Futura, "Century Gothic", ui-sans-serif, system-ui, sans-serif;
-  --ek-font-body: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --ek-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --ky-font-display: Archivo, "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
+  --ky-font-body: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ky-font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ek-bg: #12211C;
-    --ek-surface: #1A2C26;
-    --ek-ink: #F6F4EF;
-    --ek-muted: #8B968F;
-    --ek-accent: #46A88A;
-    --ek-accent-strong: #5CC0A2;
-    --ek-brass-ink: #B89031;
-    --ek-rule: #24382F;
-    --ek-rule-strong: #33493F;
+    --ky-bg:            #16202A;
+    --ky-surface:       #1F2A36;
+    --ky-ink:           #F1EEE6;
+    --ky-muted:         #98A2AE;
+    --ky-accent:        #3FB3AE;
+    --ky-accent-strong: #62C9C4;
+    --ky-dawn-ink:      #E9A27A;
+    --ky-rule:          #26313D;
+    --ky-rule-strong:   #34404D;
   }
 }
 
 :root[data-theme="dark"] {
-  --ek-bg: #12211C;
-  --ek-surface: #1A2C26;
-  --ek-ink: #F6F4EF;
-  --ek-muted: #8B968F;
-  --ek-accent: #46A88A;
-  --ek-accent-strong: #5CC0A2;
-  --ek-brass-ink: #B89031;
-  --ek-rule: #24382F;
-  --ek-rule-strong: #33493F;
+  --ky-bg:            #16202A;
+  --ky-surface:       #1F2A36;
+  --ky-ink:           #F1EEE6;
+  --ky-muted:         #98A2AE;
+  --ky-accent:        #3FB3AE;
+  --ky-accent-strong: #62C9C4;
+  --ky-dawn-ink:      #E9A27A;
+  --ky-rule:          #26313D;
+  --ky-rule-strong:   #34404D;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
 
 body {
-  background: var(--ek-bg);
-  color: var(--ek-ink);
-  font-family: var(--ek-font-body);
+  background: var(--ky-bg);
+  color: var(--ky-ink);
+  font-family: var(--ky-font-body);
   font-size: 17px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
@@ -84,7 +86,7 @@ body {
    on the landing page the mark is ~41px tall, so 1.5rem (24px) is the floor. */
 .masthead { display: flex; flex-direction: column; gap: 1.5rem; }
 
-.lockup { display: block; width: 100%; max-width: 15rem; height: auto; color: var(--ek-accent); }
+.lockup { display: block; width: 100%; max-width: 15rem; height: auto; color: var(--ky-ink); }
 .lockup-sm { max-width: 10.5rem; }
 
 /* The lockup carries the name, so the h1 is present for structure and screen
@@ -95,32 +97,32 @@ body {
 }
 
 .tagline {
-  font-family: var(--ek-font-display);
+  font-family: var(--ky-font-display);
   font-size: 1.15rem;
   letter-spacing: .005em;
-  color: var(--ek-muted);
+  color: var(--ky-muted);
 }
 
 .crumb {
-  font-family: var(--ek-font-mono);
+  font-family: var(--ky-font-mono);
   font-size: 11px;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--ek-brass-ink);
+  color: var(--ky-dawn-ink);
 }
 
 /* --- the machine layer -------------------------------------------------- */
-/* Plex Mono is the voice of the machinery around the content: geometry
+/* The mono face is the voice of the machinery around the content: geometry
    callouts, build stamps, section labels (brand/README.md section 8). It
    annotates and never speaks — nothing a reader must read to understand the
-   page is set in it. Muted is its colour; .crumb and .now .status stay brass
+   page is set in it. Muted is its colour; .crumb and .now .status stay dawn
    because they carry an earned state rather than an annotation. */
 .machine {
-  font-family: var(--ek-font-mono);
+  font-family: var(--ky-font-mono);
   font-size: 11px;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: var(--ek-muted);
+  color: var(--ky-muted);
   line-height: 1.6;
 }
 
@@ -144,7 +146,7 @@ body {
           mask-image: url("/plate/dither-12.svg");
   -webkit-mask-size: 8px 8px;
           mask-size: 8px 8px;
-  background-color: var(--ek-rule-strong);
+  background-color: var(--ky-rule-strong);
 }
 
 .plate > * { position: relative; }
@@ -157,7 +159,7 @@ body {
           mask-image: url("/plate/corner.svg");
   -webkit-mask-size: 16px 16px;
           mask-size: 16px 16px;
-  background-color: var(--ek-muted);
+  background-color: var(--ky-muted);
 }
 .cm-tl { top: 0; left: 0; }
 .cm-tr { top: 0; right: 0; transform: rotate(90deg); }
@@ -166,7 +168,7 @@ body {
 
 /* --- headings and prose ------------------------------------------------ */
 h1.title, h2 {
-  font-family: var(--ek-font-display);
+  font-family: var(--ky-font-display);
   font-weight: 500;
   letter-spacing: -.005em;
   text-wrap: balance;
@@ -176,46 +178,46 @@ h2 { font-size: 1.2rem; }
 
 .prose { display: flex; flex-direction: column; gap: 1.1rem; }
 .section { display: flex; flex-direction: column; gap: .7rem; }
-.date { color: var(--ek-muted); font-size: .92rem; }
+.date { color: var(--ky-muted); font-size: .92rem; }
 
-a { color: var(--ek-accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-a:hover { color: var(--ek-accent-strong); }
-a:focus-visible { outline: 2px solid var(--ek-accent); outline-offset: 2px; border-radius: 2px; }
+a { color: var(--ky-accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { color: var(--ky-accent-strong); }
+a:focus-visible { outline: 2px solid var(--ky-accent); outline-offset: 2px; border-radius: 2px; }
 
 strong { font-weight: 600; }
 
 /* --- the one card on the site: what's being built ---------------------- */
 .now {
-  background: var(--ek-surface);
-  border: 1px solid var(--ek-rule);
+  background: var(--ky-surface);
+  border: 1px solid var(--ky-rule);
   border-radius: 12px;
   padding: 1.5rem 1.6rem;
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
-.now h3 { font-family: var(--ek-font-display); font-size: 1.3rem; font-weight: 500; }
+.now h3 { font-family: var(--ky-font-display); font-size: 1.3rem; font-weight: 500; }
 .now h3 a { text-decoration: none; }
 .now h3 a:hover { text-decoration: underline; }
 .now .status {
-  font-family: var(--ek-font-mono);
+  font-family: var(--ky-font-mono);
   font-size: 11px;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--ek-brass-ink);
+  color: var(--ky-dawn-ink);
 }
 
-.rule { border: 0; border-top: 1px solid var(--ek-rule); }
+.rule { border: 0; border-top: 1px solid var(--ky-rule); }
 
 footer {
-  color: var(--ek-muted);
+  color: var(--ky-muted);
   font-size: .85rem;
   display: flex;
   flex-direction: column;
   gap: .5rem;
 }
-footer a { color: var(--ek-muted); }
-footer a:hover { color: var(--ek-accent); }
+footer a { color: var(--ky-muted); }
+footer a:hover { color: var(--ky-accent); }
 
 @media (max-width: 30rem) {
   body { font-size: 16px; }

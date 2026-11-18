@@ -10,6 +10,9 @@ Live at <https://kyparis-studio.github.io>.
     index.html              studio landing
     undercrew/index.html    Undercrew — description, beta, support
     undercrew/privacy.html  Undercrew privacy policy (referenced by App Store Connect)
+    zoostead/index.html     Zoostead: description, beta, support, press art
+    zoostead/privacy.html   Zoostead privacy policy
+    wildhold/               forwards to zoostead/ (the game's old working name)
     brand.css               tokens + page styles
     plate/                  dither tile and crop mark, mirrored from the brand kit
     build.py                assembles the three pages

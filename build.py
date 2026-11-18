@@ -90,7 +90,7 @@ index_body = f"""
     {PLATE_MARKS}
     <div class="now">
       <span class="status">In beta on TestFlight</span>
-      <h3><a href="/wildhold/">Wildhold</a></h3>
+      <h3><a href="/zoostead/">Zoostead</a></h3>
       <p>A pixel-art zoo game for Mac, iPad and iPhone that you run like a
       ledger and a studbook: the business, the genetics, the numbers.</p>
     </div>
@@ -213,24 +213,24 @@ privacy_body = f"""
 </footer>
 """
 
-# --------------------------------------------------------------- wildhold
-# Wildhold wears its own world too: the art is the game's own voxel render
-# (wildhold repo, scripts/marketing/keyart.py, decision 0081), copied here.
+# --------------------------------------------------------------- zoostead
+# Zoostead wears its own world too: the art is the game's own voxel render
+# (zoostead repo, scripts/marketing/keyart.py, decision 0081), copied here.
 # This page is the App Store marketing and support URL.
 PIXEL_IMG = 'style="display:block;width:100%;height:auto;image-rendering:pixelated"'
 
-wildhold_body = f"""
+zoostead_body = f"""
 <header class="masthead">
   <a href="/" aria-label="Kyparis home">{lock_sm}</a>
-  <h1 class="title">Wildhold</h1>
+  <h1 class="title">Zoostead</h1>
   <p class="tagline">Your zoo, your ledger, your legacy.</p>
 </header>
 
-<img src="/wildhold/art/key-art-1920x1080.png" width="1920" height="1080" {PIXEL_IMG}
-  alt="Wildhold key art: a block-built savanna zoo in pixel art, with giraffes, zebras and elephants under a gold wordmark.">
+<img src="/zoostead/art/key-art-1920x1080.png" width="1920" height="1080" {PIXEL_IMG}
+  alt="Zoostead key art: a block-built savanna zoo in pixel art, with giraffes, zebras and elephants under a gold wordmark.">
 
 <div class="prose">
-  <p>Wildhold is a zoo you run like a ledger and a studbook. Start with an
+  <p>Zoostead is a zoo you run like a ledger and a studbook. Start with an
   empty plot and a bank loan, lay out exhibits block by block, and close
   every month with a report: what each exhibit earned and cost, who was
   born, who died, and why the guests came or didn't.</p>
@@ -243,15 +243,15 @@ wildhold_body = f"""
 
 <section class="section">
   <h2>Beta</h2>
-  <p>Wildhold is in testing on TestFlight. It will be free to try, with one
+  <p>Zoostead is in testing on TestFlight. It will be free to try, with one
   purchase that unlocks the whole zoo. No ads, no accounts, no data
   collected.</p>
 </section>
 
 <section class="section">
-  <h2>Support</h2>
+  <h2 id="support">Support</h2>
   <p>Questions, bugs, or a zoo that went wrong: email
-  <a href="mailto:wildhold@enkrata.dev">wildhold@enkrata.dev</a>, or use the
+  <a href="mailto:zoostead@kyparis.dev">zoostead@kyparis.dev</a>, or use the
   feedback button inside TestFlight. Say which device you play on and, if
   you can, attach the saved zoo.</p>
   <p>Purchases are handled by the store you bought from. To restore the
@@ -260,44 +260,46 @@ wildhold_body = f"""
 
 <section class="section">
   <h2>Press</h2>
-  <p>Wildhold is made by Kyparis, a small independent studio. For press
+  <p>Zoostead is made by Kyparis, a small independent studio. For press
   enquiries and review copies, email
-  <a href="mailto:press@enkrata.dev">press@enkrata.dev</a>.</p>
+  <a href="mailto:press@kyparis.dev">press@kyparis.dev</a>.</p>
   <ul>
-    <li><a href="/wildhold/art/key-art-3840x2160.png">Key art, 3840 &times; 2160</a></li>
-    <li><a href="/wildhold/art/key-art-1920x1080.png">Key art, 1920 &times; 1080</a></li>
-    <li><a href="/wildhold/art/logo-wordmark.png">Wordmark</a></li>
-    <li><a href="/wildhold/art/icon-1024.png">App icon, 1024</a></li>
-    <li><a href="/wildhold/art/animal-lineup.png">Animal lineup</a></li>
+    <li><a href="/zoostead/art/key-art-3840x2160.png">Key art, 3840 &times; 2160</a></li>
+    <li><a href="/zoostead/art/key-art-1920x1080.png">Key art, 1920 &times; 1080</a></li>
+    <li><a href="/zoostead/art/logo-wordmark.png">Wordmark</a></li>
+    <li><a href="/zoostead/art/icon-1024.png">App icon, 1024</a></li>
+    <li><a href="/zoostead/art/animal-lineup.png">Animal lineup</a></li>
   </ul>
 </section>
 
 <hr class="rule">
 <footer>
-  <p><a href="/wildhold/privacy.html">Privacy policy</a> &middot;
+  <p><a href="/zoostead/privacy.html">Privacy policy</a> &middot;
   An <a href="/">Kyparis</a> game &middot; &copy; 2026 Kyparis</p>
   {STAMP}
 </footer>
 """
 
-# The Wildhold policy is referenced by App Store Connect once submitted, and
+# The Zoostead policy is referenced by App Store Connect once submitted, and
 # is legally operative from publication — change it only with a new date.
-wildhold_privacy_body = f"""
+zoostead_privacy_body = f"""
 <header class="masthead">
   <a href="/" aria-label="Kyparis home">{lock_sm}</a>
-  <h1 class="title">Wildhold — Privacy Policy</h1>
-  <p class="date">Effective November 1, 2026</p>
+  <h1 class="title">Zoostead — Privacy Policy</h1>
+  <p class="date">Effective November 17, 2026</p>
 </header>
 
 <div class="prose">
-  <p>Wildhold is a game made by Kyparis. This policy covers the game on Mac,
+  <p>Zoostead is a game made by Kyparis. This policy covers the game on Mac,
   iPad, iPhone and Steam.</p>
-  <p><strong>The short version: Wildhold collects nothing.</strong></p>
+  <p><strong>The short version: Zoostead collects nothing.</strong></p>
+  <p>Zoostead was called Wildhold while in early testing. Only the name
+  changed; this policy is otherwise the one in effect since November 1, 2026.</p>
 </div>
 
 <section class="section">
   <h2>What the game collects</h2>
-  <p>Nothing. Wildhold has no accounts, no sign-in, no advertising, no
+  <p>Nothing. Zoostead has no accounts, no sign-in, no advertising, no
   analytics, no tracking, and no third-party SDKs. It does not send anything
   over the internet.</p>
 </section>
@@ -319,7 +321,7 @@ wildhold_privacy_body = f"""
 
 <section class="section">
   <h2>TestFlight beta testing</h2>
-  <p>If you play Wildhold through TestFlight, Apple may share crash logs and
+  <p>If you play Zoostead through TestFlight, Apple may share crash logs and
   usage statistics with us, and anything you choose to send through
   TestFlight's feedback tools (comments, screenshots) comes to us as you
   submitted it. This collection is performed by Apple under the
@@ -330,7 +332,7 @@ wildhold_privacy_body = f"""
 
 <section class="section">
   <h2>Children</h2>
-  <p>Wildhold collects no information from anyone, children included.</p>
+  <p>Zoostead collects no information from anyone, children included.</p>
 </section>
 
 <section class="section">
@@ -344,12 +346,12 @@ wildhold_privacy_body = f"""
 <section class="section">
   <h2>Contact</h2>
   <p>Questions about this policy:
-  <a href="mailto:wildhold@enkrata.dev">wildhold@enkrata.dev</a></p>
+  <a href="mailto:zoostead@kyparis.dev">zoostead@kyparis.dev</a></p>
 </section>
 
 <hr class="rule">
 <footer>
-  <p><a href="/wildhold/">Wildhold</a> &middot; An <a href="/">Kyparis</a>
+  <p><a href="/zoostead/">Zoostead</a> &middot; An <a href="/">Kyparis</a>
   game &middot; &copy; 2026 Kyparis</p>
   {STAMP}
 </footer>
@@ -365,15 +367,32 @@ pages = [
     ("undercrew/privacy.html", page("Undercrew — Privacy Policy",
         "Undercrew collects no data. No accounts, no analytics, no tracking, no third-party SDKs.",
         "/undercrew/privacy.html", privacy_body)),
-    ("wildhold/index.html", page("Wildhold",
-        "Wildhold: a pixel-art zoo game for Mac, iPad and iPhone that you run like a ledger and a studbook.",
-        "/wildhold/", wildhold_body)),
-    ("wildhold/privacy.html", page("Wildhold — Privacy Policy",
-        "Wildhold collects no data. No accounts, no analytics, no tracking, no third-party SDKs.",
-        "/wildhold/privacy.html", wildhold_privacy_body)),
+    ("zoostead/index.html", page("Zoostead",
+        "Zoostead: a pixel-art zoo game for Mac, iPad and iPhone that you run like a ledger and a studbook.",
+        "/zoostead/", zoostead_body)),
+    ("zoostead/privacy.html", page("Zoostead — Privacy Policy",
+        "Zoostead collects no data. No accounts, no analytics, no tracking, no third-party SDKs.",
+        "/zoostead/privacy.html", zoostead_privacy_body)),
 ]
 
 for path, html in pages:
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     open(path, "w").write(html)
     print(f"  wrote {path}  ({len(html)} bytes)")
+
+# The game was called Wildhold until 2026-11-17 (zoostead repo, decision
+# 0101). Its old addresses forward to the new ones, so links already out
+# there, App Store Connect's included, keep working.
+REDIRECT = """<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Zoostead</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://kyparis-studio.github.io{to}">
+<meta http-equiv="refresh" content="0; url={to}">
+</head><body><p>Wildhold is now Zoostead: <a href="{to}">kyparis-studio.github.io{to}</a></p></body></html>
+"""
+for path, to in [("wildhold/index.html", "/zoostead/"),
+                 ("wildhold/privacy.html", "/zoostead/privacy.html")]:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w").write(REDIRECT.format(to=to))
+    print(f"  wrote {path}  (redirect to {to})")
